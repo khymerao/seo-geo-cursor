@@ -4,6 +4,27 @@
 
 All endpoints below were verified against primary vendor/source docs (2026-05). If a call 404s, re-check the linked doc — vendors move endpoints.
 
+## Cursor MCP tools (seo-geo-connectors)
+
+When the plugin MCP server is enabled, prefer these tools over raw CLI:
+
+| MCP tool | Replaces |
+|----------|----------|
+| `crawl_site` | `python3 scripts/connectors/crawl.py` |
+| `onpage_audit` | `python3 scripts/connectors/onpage.py` |
+| `check_robots` | `python3 scripts/connectors/robots.py` |
+| `fetch_sitemap` | `python3 scripts/connectors/sitemap.py` |
+| `link_graph` | `python3 scripts/connectors/linkgraph.py` |
+| `page_speed` | `python3 scripts/connectors/psi.py` |
+| `schema_lint` | `python3 scripts/connectors/schema_lint.py` |
+| `wikidata_entity` | `python3 scripts/connectors/kg.py` |
+| `wayback_history` | `python3 scripts/connectors/wayback.py` |
+| `domain_authority` | `python3 scripts/connectors/openpagerank.py` |
+| `keyword_suggest` | `python3 scripts/connectors/suggest.py` |
+| `rss_monitor` | `python3 scripts/connectors/rss_monitor.py` |
+
+Remote HTTP MCP (Ahrefs, Semrush, etc.): run `./scripts/generate-mcp-config.sh --with-remote` — see docs/mcp-setup.md.
+
 ## Bundled helpers — run the data fetch locally (zero-dependency)
 
 For the bundle-able categories the repo ships small **Python-3-stdlib** helpers under [`scripts/connectors/`](scripts/connectors/README.md) — no `pip`, no key (except where noted). They turn the recipes below into one command, so a skill can pull real data itself instead of asking you to paste it. Run from the repo root:

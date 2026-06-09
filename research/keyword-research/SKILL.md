@@ -70,6 +70,8 @@ What keywords is [competitor URL] ranking for that I should target?
 
 Optional integrations: ~~SEO tool, ~~search console. Without tools, ask for seed keywords, audience, goals, and any known metrics. See [CONNECTORS.md](https://github.com/aaron-he-zhu/seo-geo-claude-skills/blob/main/CONNECTORS.md).
 
+**Cursor MCP (preferred):** Use `seo-geo-connectors` MCP tools when enabled; CLI fallback below.
+
 **Zero-dependency local helper** (no tool needed): `python3 scripts/connectors/suggest.py "<seed>" --expand` harvests free keyword ideas from Google Autocomplete (⚠️ unofficial endpoint). Search *volume / difficulty* still needs `~~SEO tool` or own Search Console data. See [scripts/connectors/README.md](https://github.com/aaron-he-zhu/seo-geo-claude-skills/blob/main/scripts/connectors/README.md).
 
 ## Instructions

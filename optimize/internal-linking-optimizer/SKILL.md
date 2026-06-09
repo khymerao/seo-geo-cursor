@@ -70,6 +70,8 @@ Optimize anchor text across the site
 
 Uses ~~web crawler and ~~analytics when connected; otherwise asks user for sitemap, key page URLs, and content categories. See [CONNECTORS.md](https://github.com/aaron-he-zhu/seo-geo-claude-skills/blob/main/CONNECTORS.md) and [SECURITY.md §Scraping Boundaries](https://github.com/aaron-he-zhu/seo-geo-claude-skills/blob/main/SECURITY.md).
 
+**Cursor MCP (preferred):** Use `seo-geo-connectors` MCP tools when enabled; CLI fallback below.
+
 **Zero-dependency local helper** (no tool needed): `python3 scripts/connectors/crawl.py <url> | python3 scripts/connectors/linkgraph.py -` computes orphans, click-depth, and internal PageRank from a live crawl. See [scripts/connectors/README.md](https://github.com/aaron-he-zhu/seo-geo-claude-skills/blob/main/scripts/connectors/README.md).
 
 ## Instructions

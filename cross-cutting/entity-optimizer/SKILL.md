@@ -106,6 +106,8 @@ This skill is the sole writer of canonical entity profiles at `memory/entities/<
 
 With tools: query Knowledge Graph API, ~~SEO tool, ~~AI monitor, ~~brand monitor. Without tools: ask the user for entity name/type, domain, profiles, topics, and disambiguation context. See [CONNECTORS.md](https://github.com/aaron-he-zhu/seo-geo-claude-skills/blob/main/CONNECTORS.md).
 
+**Cursor MCP (preferred):** Use `seo-geo-connectors` MCP tools when enabled; CLI fallback below.
+
 **Zero-dependency local helper** (keyless): `python3 scripts/connectors/kg.py reconcile "<entity>"` resolves the name to a Wikidata QID with a confidence score (does the open KG that feeds Knowledge Panels & AI answers recognize it?); `kg.py entity <QID>` returns claims + sameAs. See [scripts/connectors/README.md](https://github.com/aaron-he-zhu/seo-geo-claude-skills/blob/main/scripts/connectors/README.md).
 
 ## Decision Gates

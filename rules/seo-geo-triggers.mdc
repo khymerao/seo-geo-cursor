@@ -1,0 +1,15 @@
+---
+description: Route SEO and GEO requests to seo-geo-router or phase skills. Use when user mentions SEO, GEO, keywords, schema, audit, rankings, AI visibility, CORE-EEAT, CITE.
+alwaysApply: false
+---
+
+# SEO/GEO Triggers
+
+When the user request involves SEO or GEO:
+
+1. Load skill `seo-geo-router` for open-ended goals.
+2. Load the specific phase skill when intent is clear (e.g. keyword-research, on-page-seo-auditor).
+3. Prefer MCP `seo-geo-connectors` tools when enabled in Settings → Tools & MCP.
+4. Fallback: `python3 scripts/connectors/<script>.py` from plugin root.
+5. Tier 1 manual: ask user to paste data if no MCP/CLI available.
+6. See CONNECTORS.md for data source tiers.
