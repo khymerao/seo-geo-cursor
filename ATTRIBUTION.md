@@ -18,4 +18,4 @@ Apache License 2.0 — see [LICENSE](LICENSE) (to be aligned with upstream on im
 
 ## Upstream Version
 
-Target import: **v9.9.10** (2026-06-05 release)
+Imported: **v9.9.10** (commit `dea9f4d6efaa886ddc5dcef5b597dd2b8650ff18` from /tmp/seo-geo-upstream)
