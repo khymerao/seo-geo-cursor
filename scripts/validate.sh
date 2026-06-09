@@ -87,6 +87,34 @@ done < <(find "$ROOT" -type f \
   ! -path '*/mcp/.venv/*' \
   -print0 2>/dev/null)
 
+
+for dir in research build optimize monitor cross-cutting scripts/connectors references; do
+  if [[ -d "$ROOT/$dir" ]]; then
+    ok "Upstream present: $dir/"
+  else
+    fail "Missing $dir/"
+  fi
+done
+
+if [[ -f "$ROOT/skills/seo-geo-router/SKILL.md" ]]; then
+  ok "Router skill present"
+else
+  fail "Missing router skill"
+fi
+
+if [[ -f "$ROOT/rules/seo-geo-triggers.mdc" ]]; then
+  ok "Trigger rule present"
+else
+  fail "Missing trigger rule"
+fi
+
+skill_count=$(find "$ROOT"/research "$ROOT"/build "$ROOT"/optimize "$ROOT"/monitor "$ROOT"/cross-cutting -name 'SKILL.md' 2>/dev/null | wc -l | tr -d ' ')
+if [[ "$skill_count" -eq 20 ]]; then
+  ok "20 upstream skills"
+else
+  fail "Expected 20 skills, found $skill_count"
+fi
+
 if [[ "$ERR" -ne 0 ]]; then
   echo ""
   echo "Validation failed." >&2
