@@ -102,7 +102,7 @@ Reload Window after each install. Cursor does not hot-reload local plugin change
 | Output shows 0 plugins loaded | Symlinked plugin path | Do not symlink into `~/.cursor/plugins/local/`; use `install-to-cursor.sh` (real copy) |
 | `Plugin root is a symlink` from validate | Repo or target is a symlink | Clone to a normal directory; installer copies to a real path |
 | `Script not executable` warning | Missing `chmod` | `chmod +x scripts/*.sh hooks/*` |
-| `Python >= 3.11 is required` | Old Python default | Install Python 3.11+; ensure `python3 --version` ≥ 3.11 |
+| `Python >= 3.11 is required` | macOS system Python 3.9 | `brew install python@3.12` then `export PATH="/opt/homebrew/bin:$PATH"` before `./scripts/setup.sh` |
 | `Missing venv. Run setup.sh` | MCP venv not built | `./scripts/setup.sh` |
 | `.mcp.json not generated` | Setup skipped or failed | `./scripts/setup.sh`; check `mcp/.venv` exists |
 | `seo-geo-connectors` missing in **Tools & MCP** | MCP disabled or stale install | Re-run install + setup; reload window; enable server in settings |

@@ -38,6 +38,6 @@ echo "Next steps:"
 echo "  1. Developer: Reload Window"
 echo "  2. Settings → Plugins → verify '$DISPLAY'"
 if has_mcp_component "$ROOT"; then
-  echo "  3. Settings → Tools & MCP → enable '$NAME'"
+  echo "  3. Settings → Tools & MCP → enable 'seo-geo-connectors'"
 fi
 echo "  4. Output → Cursor Plugins → loadUserLocalPlugins (... 1 plugins loaded)"
