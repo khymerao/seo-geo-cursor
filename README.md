@@ -1,28 +1,35 @@
-# SEO & GEO Skills
+# SEO & GEO Skills (Cursor Plugin)
 
-Local Cursor plugin generated from [cursor-plugin](https://github.com/khymerao/cursor-plugin).
+Cursor local plugin port of [aaron-he-zhu/seo-geo-claude-skills](https://github.com/aaron-he-zhu/seo-geo-claude-skills) — 20 SEO/GEO skills, CORE-EEAT + CITE frameworks, connector MCP, and optional remote SEO tool integrations.
 
-## Setup
+Built with [khymerao/cursor-plugin](https://github.com/khymerao/cursor-plugin) boilerplate.
+
+**Design spec:** [docs/superpowers/specs/2026-06-09-seo-geo-cursor-design.md](docs/superpowers/specs/2026-06-09-seo-geo-cursor-design.md)
+
+## Status
+
+🚧 In development — scaffold + design spec committed; upstream import and MCP layer pending.
+
+## Quick Start (when ready)
 
 ```bash
-chmod +x scripts/*.sh
-./scripts/setup.sh    # MCP venv + .mcp.json
+git clone git@github.com:khymerao/seo-geo-cursor.git
+cd seo-geo-cursor
+chmod +x scripts/*.sh hooks/*
+./scripts/setup.sh
 ./scripts/install-to-cursor.sh
 ```
 
-Reload Cursor (**Developer: Reload Window**), then check **Settings → Plugins**.
+Reload Cursor (**Developer: Reload Window**), then check **Settings → Plugins** and **Tools & MCP**.
 
-## Components
+## Documentation
 
+- [Install guide](docs/install.md) *(pending)*
+- [MCP setup](docs/mcp-setup.md) *(pending)*
+- [Claude → Cursor porting notes](docs/porting-notes.md) *(pending)*
+- [Upstream sync](docs/upstream-sync.md) *(pending)*
+- [Attribution](ATTRIBUTION.md)
 
-- Skills (`skills/`)
-- Rules (`rules/`)
-- Hooks (`hooks/`)
-- MCP server (`mcp/`)
+## License
 
-## Verify
-
-- Output → **Cursor Plugins**: `loadUserLocalPlugins (... 1 plugins loaded)`
-- **Settings → Plugins** → SEO & GEO Skills
-
-See [Cursor local plugin docs](https://cursor.com/docs/plugins) and `docs/` in the cursor-plugin repo.
+Apache-2.0 (upstream) — see [ATTRIBUTION.md](ATTRIBUTION.md).
