@@ -2,9 +2,10 @@
   "version": 1,
   "hooks": {
     "sessionStart": [
-      {
-        "command": "./hooks/session-start"
-      }
+      { "command": "./hooks/session-start" }
+    ],
+    "postToolUse": [
+      { "command": "./hooks/post-tool-use" }
     ]
   }
 }
