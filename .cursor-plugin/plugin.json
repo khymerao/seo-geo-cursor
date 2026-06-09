@@ -1,18 +1,44 @@
 {
   "name": "seo-geo-cursor",
   "displayName": "SEO & GEO Skills",
-  "version": "0.1.0",
-  "description": "20 SEO/GEO skills with connector MCP for Cursor — ported from aaron-he-zhu/seo-geo-claude-skills",
+  "version": "1.0.0",
+  "description": "20 SEO/GEO skills, connector MCP, CORE-EEAT + CITE for Cursor",
   "author": {
     "name": "khymerao",
     "email": "hello@khymerao.com"
   },
-  "license": "MIT",
+  "homepage": "https://github.com/khymerao/seo-geo-cursor",
+  "repository": "https://github.com/khymerao/seo-geo-cursor",
+  "license": "Apache-2.0",
   "keywords": [
     "cursor-plugin",
+    "seo",
+    "geo",
     "seo-geo-cursor"
   ],
-  "skills": "./skills/",
+  "skills": [
+    "./skills/seo-geo-router",
+    "./research/keyword-research",
+    "./research/competitor-analysis",
+    "./research/serp-analysis",
+    "./research/content-gap-analysis",
+    "./build/seo-content-writer",
+    "./build/geo-content-optimizer",
+    "./build/meta-tags-optimizer",
+    "./build/schema-markup-generator",
+    "./optimize/on-page-seo-auditor",
+    "./optimize/technical-seo-checker",
+    "./optimize/internal-linking-optimizer",
+    "./optimize/content-refresher",
+    "./monitor/rank-tracker",
+    "./monitor/backlink-analyzer",
+    "./monitor/performance-reporter",
+    "./monitor/alert-manager",
+    "./cross-cutting/content-quality-auditor",
+    "./cross-cutting/domain-authority-auditor",
+    "./cross-cutting/entity-optimizer",
+    "./cross-cutting/memory-management"
+  ],
   "rules": "./rules/",
   "hooks": "./hooks/hooks.json",
   "mcpServers": "./.mcp.json"
