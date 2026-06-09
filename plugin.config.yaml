@@ -1,0 +1,17 @@
+# Plugin component flags — used by scaffold.sh
+# Set to true/false; scaffold removes disabled sections from generated plugins.
+
+components:
+  skills: true
+  rules: true
+  hooks: true
+  mcp: true
+
+install:
+  # Directory name under ~/.cursor/plugins/local/
+  local_name: "seo-geo-cursor"
+
+mcp:
+  # Key in .mcp.json mcpServers and FastMCP server name
+  server_key: "seo-geo-cursor"
+  python_min: "3.11"

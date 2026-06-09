@@ -1,0 +1,19 @@
+{
+  "name": "seo-geo-cursor",
+  "displayName": "SEO & GEO Skills",
+  "version": "0.1.0",
+  "description": "20 SEO/GEO skills with connector MCP for Cursor — ported from aaron-he-zhu/seo-geo-claude-skills",
+  "author": {
+    "name": "khymerao",
+    "email": "hello@khymerao.com"
+  },
+  "license": "MIT",
+  "keywords": [
+    "cursor-plugin",
+    "seo-geo-cursor"
+  ],
+  "skills": "./skills/",
+  "rules": "./rules/",
+  "hooks": "./hooks/hooks.json",
+  "mcpServers": "./.mcp.json"
+}
