@@ -4,7 +4,7 @@ This plugin is a Cursor port of [seo-geo-claude-skills](https://github.com/aaron
 
 ## Upstream License
 
-Apache License 2.0 — see [LICENSE](LICENSE) (to be aligned with upstream on import).
+Apache License 2.0 — see [LICENSE](LICENSE) (imported from upstream v9.9.10).
 
 ## Modifications
 

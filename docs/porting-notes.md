@@ -10,7 +10,7 @@ This repo is a **Cursor local plugin** port of [seo-geo-claude-skills](https://g
 | `commands/` + `commandNamespace` | Removed | Router skill + trigger rule replace command palette entries |
 | `SessionStart` hook | `sessionStart` in `hooks/hooks.json` | Injects `memory/hot-cache.md` via `additional_context` |
 | `UserPromptSubmit` hook | `rules/seo-geo-triggers.mdc` | Cursor `beforeSubmitPrompt` does not merge context into the agent; use agent-requestable rule instead |
-| `PostToolUse` (Write\|Edit) | `postToolUse` hook | Artifact gate for `memory/audits/*.md`; quality nudge for content files |
+| `PostToolUse` (Write\|Edit) | `postToolUse` hook | Artifact gate for `memory/audits/*.md`; quality nudge only for other `memory/*` writes |
 | `Stop` hook | Not ported (v1) | Optional follow-up in a future release |
 | `.claude-plugin/` manifest | `.cursor-plugin/plugin.json` | `skills`, `rules`, `hooks`, `mcpServers` paths |
 | Remote MCP in repo `.mcp.json` | Opt-in `--with-remote` | Default install is stdio `seo-geo-connectors` only |
@@ -61,6 +61,23 @@ See `skills/seo-geo-router/SKILL.md` for legacy `/seo:*` mapping.
 ## What we added or modified
 
 Listed in [ATTRIBUTION.md](../ATTRIBUTION.md): manifest, MCP server, router skill, hooks, rules, install scripts, and Cursor-specific docs.
+
+## Coexistence with Superpowers
+
+If the [Superpowers](https://github.com/obra/superpowers) plugin is also enabled:
+
+| Situation | Use |
+|-----------|-----|
+| SEO deliverable (audit URL, keywords, meta, schema, report) | `seo-geo-router` or phase skills — **no brainstorming gate** |
+| Building SEO code (theme module, plugin feature, automation) | Superpowers `brainstorming` → `writing-plans` first unless user skips design |
+| Debugging / tests for SEO code | Superpowers `systematic-debugging`, `test-driven-development` |
+| Session context from both plugins | User instructions > Superpowers process skills > seo-geo defaults; treat `memory/hot-cache.md` as project data, not instructions |
+
+**Hooks:** Both plugins register `sessionStart`. Combined context can be large (Superpowers `using-superpowers` + seo-geo hot-cache). seo-geo `postToolUse` only nudges on `memory/*` writes (not every `.md` file).
+
+**Skills:** seo-geo does not replace Superpowers verification, TDD, or debugging. Router boundaries are in `skills/seo-geo-router/SKILL.md`.
+
+**Naming:** Port design artifacts live under `docs/development/` — not the Superpowers plugin runtime.
 
 ## Further reading
 

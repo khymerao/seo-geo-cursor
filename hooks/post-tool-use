@@ -1,7 +1,6 @@
 #!/usr/bin/env bash
 set -euo pipefail
 
-# Read hook input from stdin
 INPUT="$(cat 2>/dev/null || true)"
 FILE="$(printf '%s' "$INPUT" | python3 -c 'import json,sys; d=json.load(sys.stdin); print(d.get("file_path","") or d.get("path",""))' 2>/dev/null || true)"
 
@@ -10,8 +9,16 @@ cwd="$(printf '%s' "$INPUT" | python3 -c 'import json,sys; d=json.load(sys.stdin
 [[ -n "$cwd" ]] && WORKSPACE="$cwd"
 
 [[ -n "$FILE" ]] || exit 0
-case "$FILE" in
-  */memory/audits/*.md)
+
+# Resolve relative paths against workspace
+[[ "$FILE" = /* ]] || FILE="$WORKSPACE/$FILE"
+[[ -f "$FILE" ]] || exit 0
+
+REL="${FILE#"$WORKSPACE"/}"
+[[ "$REL" == "$FILE" ]] && REL="$(basename "$FILE")"
+
+case "$REL" in
+  memory/audits/*.md)
     if grep -q '^class:[[:space:]]*auditor-output' "$FILE" 2>/dev/null; then
       if ! awk '/^status:/{ok=1} END{exit(ok?0:1)}' "$FILE" 2>/dev/null; then
         printf '{"continue": false, "user_message": "Artifact gate: memory/audits file missing valid status field. See references/auditor-runbook.md"}\n'
@@ -19,8 +26,8 @@ case "$FILE" in
       fi
     fi
     ;;
-  *.md|*.html|*.txt)
-    printf '{"additional_context": "If this is user-facing SEO content, offer a quick quality check before publishing."}\n'
+  memory/*)
+    printf '{"additional_context": "SEO project memory updated. If this affects publish-ready content, offer a quick quality check before publishing."}\n'
     ;;
 esac
 exit 0

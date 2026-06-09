@@ -73,6 +73,18 @@ Re-run from the installed copy if you use `install-to-cursor.sh`:
 
 Then reload Cursor and enable the servers you need in **Tools & MCP**.
 
+### Merging with existing MCP config
+
+`--with-remote` uses generic server keys (`ahrefs`, `semrush`, `notion`, etc.) that may **collide** with servers you already defined in Cursor user settings or another plugin.
+
+| Approach | When to use |
+|----------|-------------|
+| **Plugin-only `.mcp.json`** (default) | Let the plugin manifest supply MCP; do not copy remote entries into global config |
+| **Manual merge** | Rename conflicting keys before merge (e.g. `seo-geo-ahrefs`) and update skill docs if you reference them |
+| **Stdio-only** | Keep `./scripts/generate-mcp-config.sh` without `--with-remote` if you already use Ahrefs/Semrush MCP elsewhere |
+
+The plugin never overwrites your user-level MCP settings — it only writes `.mcp.json` inside the plugin directory.
+
 ### 14 HTTP MCP servers
 
 | Server key | Vendor | Endpoint | Primary auth |

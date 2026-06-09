@@ -8,7 +8,7 @@
 
 **Tech Stack:** Bash, Python 3.11+, FastMCP, Cursor plugin manifest, upstream stdlib connector scripts.
 
-**Spec:** [docs/superpowers/specs/2026-06-09-seo-geo-cursor-design.md](../specs/2026-06-09-seo-geo-cursor-design.md)
+**Spec:** [docs/development/specs/2026-06-09-seo-geo-cursor-design.md](../specs/2026-06-09-seo-geo-cursor-design.md)
 
 **Repo root:** `/Users/koristuvac/Projects/seo-geo-cursor`
 

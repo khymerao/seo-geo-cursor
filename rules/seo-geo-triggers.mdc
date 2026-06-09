@@ -9,7 +9,12 @@ When the user request involves SEO or GEO:
 
 1. Load skill `seo-geo-router` for open-ended goals.
 2. Load the specific phase skill when intent is clear (e.g. keyword-research, on-page-seo-auditor).
-3. Prefer MCP `seo-geo-connectors` tools when enabled in Settings → Tools & MCP.
-4. Fallback: `python3 scripts/connectors/<script>.py` from plugin root.
+3. **Prefer MCP `seo-geo-connectors`** when enabled in Settings → Tools & MCP (required for connector automation from user workspaces).
+4. CLI fallback (only if MCP disabled): run from install path `~/.cursor/plugins/local/seo-geo-cursor/scripts/connectors/<script>.py` — not from the user project root.
 5. Tier 1 manual: ask user to paste data if no MCP/CLI available.
 6. See CONNECTORS.md for data source tiers.
+
+## Superpowers priority
+
+- SEO **deliverables** → seo-geo-router / phase skills (skip brainstorming).
+- SEO **implementation in code** → Superpowers brainstorming first unless user says otherwise.

@@ -4,7 +4,7 @@ Cursor local plugin port of [aaron-he-zhu/seo-geo-claude-skills](https://github.
 
 Built with [khymerao/cursor-plugin](https://github.com/khymerao/cursor-plugin) boilerplate.
 
-**Design spec:** [docs/superpowers/specs/2026-06-09-seo-geo-cursor-design.md](docs/superpowers/specs/2026-06-09-seo-geo-cursor-design.md)
+**Design spec:** [docs/development/specs/2026-06-09-seo-geo-cursor-design.md](docs/development/specs/2026-06-09-seo-geo-cursor-design.md)
 
 ## Status
 

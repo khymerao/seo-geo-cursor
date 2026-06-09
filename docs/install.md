@@ -105,7 +105,7 @@ Reload Window after each install. Cursor does not hot-reload local plugin change
 | `Python >= 3.11 is required` | macOS system Python 3.9 | `brew install python@3.12` then `export PATH="/opt/homebrew/bin:$PATH"` before `./scripts/setup.sh` |
 | `Missing venv. Run setup.sh` | MCP venv not built | `./scripts/setup.sh` |
 | `.mcp.json not generated` | Setup skipped or failed | `./scripts/setup.sh`; check `mcp/.venv` exists |
-| `seo-geo-connectors` missing in **Tools & MCP** | MCP disabled or stale install | Re-run install + setup; reload window; enable server in settings |
+| `seo-geo-connectors` missing in **Tools & MCP** | MCP disabled or stale install | Re-run install + setup; reload window; enable **`seo-geo-connectors`** (not plugin name `seo-geo-cursor`) |
 | MCP tools fail at runtime | Wrong cwd or broken venv | Run from plugin root; reinstall with `install-to-cursor.sh` |
 | `/add-plugin` does nothing | Local plugins are not Marketplace plugins | Use git clone + `install-to-cursor.sh` only |
 | Hooks not firing | Hooks channel errors | **Output → Hooks**; confirm `hooks/hooks.json` valid (`validate.sh`) |
