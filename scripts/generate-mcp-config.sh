@@ -19,7 +19,7 @@ if [[ ! -x "$PYTHON" ]]; then
   exit 1
 fi
 
-SERVER_KEY="$(plugin_name "$ROOT")"
+SERVER_KEY="seo-geo-connectors"
 
 cat > "$OUT" <<EOF
 {
