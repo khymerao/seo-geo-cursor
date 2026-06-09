@@ -126,6 +126,8 @@ See [references/bulk-audit-playbook.md](https://github.com/aaron-he-zhu/seo-geo-
 
 Use ~~web crawler, ~~page speed tool, and ~~CDN when connected; otherwise ask for URLs, PageSpeed reports, robots.txt, and sitemap. See [CONNECTORS.md](https://github.com/aaron-he-zhu/seo-geo-claude-skills/blob/main/CONNECTORS.md) and [SECURITY.md §Scraping Boundaries](https://github.com/aaron-he-zhu/seo-geo-claude-skills/blob/main/SECURITY.md).
 
+**Cursor MCP (preferred):** Use `seo-geo-connectors` MCP tools when enabled; CLI fallback below.
+
 **Zero-dependency local helpers** (no tool needed, run yourself): `python3 scripts/connectors/robots.py <url> --check-ai-bots` · `sitemap.py <url>` · `crawl.py <url>` · `onpage.py <url>` · `psi.py <url>` (Core Web Vitals). See [scripts/connectors/README.md](https://github.com/aaron-he-zhu/seo-geo-claude-skills/blob/main/scripts/connectors/README.md).
 
 ## Instructions

@@ -8,12 +8,14 @@ for skill in "$ROOT"/research/*/SKILL.md "$ROOT"/build/*/SKILL.md "$ROOT"/optimi
 import pathlib, sys
 p = pathlib.Path(sys.argv[1])
 text = p.read_text(encoding="utf-8")
-needle = "**Zero-dependency local helper**"
 insert = "**Cursor MCP (preferred):** Use `seo-geo-connectors` MCP tools when enabled; CLI fallback below.\n\n"
-if needle in text and insert not in text:
-    text = text.replace(needle, insert + needle, 1)
-    p.write_text(text, encoding="utf-8")
-    print("patched", p)
+needles = ("**Zero-dependency local helper**", "**Zero-dependency local helpers**")
+for needle in needles:
+    if needle in text and insert not in text:
+        text = text.replace(needle, insert + needle, 1)
+        p.write_text(text, encoding="utf-8")
+        print("patched", p)
+        break
 PY
   fi
 done

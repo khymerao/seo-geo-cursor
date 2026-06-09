@@ -107,6 +107,8 @@ See [references/bulk-audit-playbook.md](https://github.com/aaron-he-zhu/seo-geo-
 
 Use ~~web crawler, ~~SEO tool, and ~~search console when connected; otherwise ask for page URL/HTML, target keywords, and competitor URLs. See [CONNECTORS.md](https://github.com/aaron-he-zhu/seo-geo-claude-skills/blob/main/CONNECTORS.md) and [SECURITY.md §Scraping Boundaries](https://github.com/aaron-he-zhu/seo-geo-claude-skills/blob/main/SECURITY.md).
 
+**Cursor MCP (preferred):** Use `seo-geo-connectors` MCP tools when enabled; CLI fallback below.
+
 **Zero-dependency local helpers** (no tool needed): `python3 scripts/connectors/onpage.py <url>` (title/meta/headings/canonical/JSON-LD/redirects) and `schema_lint.py <url>` (structured-data validation). See [scripts/connectors/README.md](https://github.com/aaron-he-zhu/seo-geo-claude-skills/blob/main/scripts/connectors/README.md).
 
 ## Instructions

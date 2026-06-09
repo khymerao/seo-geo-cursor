@@ -8,9 +8,9 @@ Built with [khymerao/cursor-plugin](https://github.com/khymerao/cursor-plugin) b
 
 ## Status
 
-🚧 In development — scaffold + design spec committed; upstream import and MCP layer pending.
+Ready for install — 20 upstream skills, stdio MCP connectors, router skill, hooks, and trigger rules are included.
 
-## Quick Start (when ready)
+## Quick Start
 
 ```bash
 git clone git@github.com:khymerao/seo-geo-cursor.git
@@ -22,13 +22,16 @@ chmod +x scripts/*.sh hooks/*
 
 Reload Cursor (**Developer: Reload Window**), then check **Settings → Plugins** and **Tools & MCP**.
 
+Full steps, verification, and troubleshooting: [docs/install.md](docs/install.md).
+
 ## Documentation
 
-- [Install guide](docs/install.md) *(pending)*
-- [MCP setup](docs/mcp-setup.md) *(pending)*
-- [Claude → Cursor porting notes](docs/porting-notes.md) *(pending)*
-- [Upstream sync](docs/upstream-sync.md) *(pending)*
+- [Install guide](docs/install.md)
+- [MCP setup](docs/mcp-setup.md)
+- [Claude → Cursor porting notes](docs/porting-notes.md)
+- [Upstream sync](docs/upstream-sync.md)
 - [Attribution](ATTRIBUTION.md)
+- [Connectors & data tiers](CONNECTORS.md)
 
 ## License
 
